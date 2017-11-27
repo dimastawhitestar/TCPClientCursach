@@ -23,6 +23,7 @@ namespace Clientkurs
         public MainWindow()
         {
             InitializeComponent();
+            int i = 2;
         }
 
         private void btnReg(object sender, RoutedEventArgs e)
