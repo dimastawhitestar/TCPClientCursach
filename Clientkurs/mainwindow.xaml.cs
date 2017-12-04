@@ -40,6 +40,7 @@ namespace Clientkurs
             autorization_panel.Visibility = Visibility.Collapsed;
             registration_panel.Visibility = Visibility.Visible;
             grid1.Height = new GridLength(370);
+            Error.Visibility = Visibility.Collapsed;
         }
         private void btnLog(object sender, RoutedEventArgs e)
         {
@@ -77,8 +78,14 @@ namespace Clientkurs
 
             if (boolRequest.flag)
             {
-
-            }              
+                LogRegGrid.Visibility = Visibility.Collapsed;
+                Backgroundimage.ImageSource = null;
+                Mainform.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Error.Visibility = Visibility.Visible;
+            }          
         }
     }
 }
